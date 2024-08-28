@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.left-panel, .right-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.left-panel {
+    width: 250px; /* Ширина левой панели */
+    transition: width 0.3s ease, transform 0.3s ease;
+}
+
+.right-panel {
+    flex-grow: 1;
+}
+
+.block {
+    flex: 1;
+    margin: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+.block1 {
+    background-color: #F25022; /* Оранжевый */
+}
+
+.block2 {
+    background-color: #7FBA00; /* Зеленый */
+}
+
+.block3 {
+    background-color: #00A4EF; /* Голубой */
+}
+
+.block4 {
+    background-color: #FFB900; /* Желтый */
+}
+
+.resizer {
+    width: 20px;
+    background-color: #888;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.resizer .arrow {
+    font-size: 1.5em;
+    color: white;
+}
+
+.horizontal-resizer {
+    height: 10px;
+    background-color: #888;
+    cursor: row-resize;
+}
+
+.left-panel.hidden {
+    width: 0;
+    transform: translateX(-100%);
+}
+
+.resizer.hidden .arrow {
+    transform: rotate(180deg); /* Поворачиваем стрелку */
+}

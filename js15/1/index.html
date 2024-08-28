@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор случайных строк</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Генератор случайных строк</h1>
+        <label for="length">Длина строки:</label>
+        <input type="number" id="length" min="1" max="100" value="10">
+        
+        <div class="checkbox-group">
+            <label>
+                <input type="checkbox" id="include-numbers" checked>
+                Цифры
+            </label>
+            <label>
+                <input type="checkbox" id="include-upper" checked>
+                Латинские буквы (верхний регистр)
+            </label>
+            <label>
+                <input type="checkbox" id="include-lower" checked>
+                Латинские буквы (нижний регистр)
+            </label>
+        </div>
+        
+        <button id="generate">Сгенерировать</button>
+        
+        <label for="output">Сгенерированная строка:</label>
+        <input type="text" id="output" readonly>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
